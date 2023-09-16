@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя визитка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Чтобы изображение пианино занимало всю область страницы */
+        }
+
+        #piano {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Помещаем фоновое изображение пианино под основное содержимое */
+            opacity: 0.5; /* Добавляем небольшую прозрачность фоновому изображению */
+        }
+
+        header {
+            background-color: #9d00ff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1; /* Помещаем шапку над фоновым изображением */
+        }
+
+        h1 {
+            font-size: 36px;
+            animation: fadeInUp 1s ease; /* Добавляем анимацию к заголовку */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Добавляем небольшой прозрачности фону контейнера */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1; /* Помещаем контейнер над фоновым изображением */
+            border-radius: 10px; /* Добавляем скругленные углы контейнеру */
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #9d00ff;
+            color: #fff;
+            position: relative;
+            z-index: 1; /* Помещаем футер над фоновым изображением */
+            border-radius: 0 0 10px 10px; /* Добавляем скругление углов футера только снизу */
+        }
+
+        /* Анимация для заголовка */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="piano" src="piano.jpg" alt="Пианино"> <!-- Замените "piano.jpg" на URL вашего изображения пианино -->
+    <header>
+        <h1>Привет, я Александр Князев</h1>
+    </header>
+    <div class="container">
+        <h2>Обо мне</h2>
+        <p>Я тестировщик, и проверю все ли работает как надо :)</p>
+        <h2>Контакты</h2>
+        <p>Email: knyazevsasha1@gmail.com</p>
+        <p>Телефон: +7 (999) 999-9999</p>
+        <!-- Элемент аудиоплеера -->
+    <audio controls>
+        <source src="your-audio-file.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio>
+    </div>
+    <footer>
+        &copy; 2023 Alexander Knyazev
+    </footer>
+</body>
+</html>
